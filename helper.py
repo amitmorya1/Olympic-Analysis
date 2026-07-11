@@ -1,6 +1,6 @@
 import numpy as np
 
-from app import athlete_df
+
 
 
 def medal_tally(df):
