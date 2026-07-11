@@ -154,11 +154,11 @@ if user_menu == 'Athlete wise Analysis':
     x3 = athlete_df[athlete_df['Medal'] == 'Silver']['Age'].dropna()
     x4 = athlete_df[athlete_df['Medal'] == 'Bronze']['Age'].dropna()
 
-    # fig = ff.create_distplot([x1, x2, x3, x4], ['Overall age', 'Gold Medalist', 'Silver Medalist', 'Bronze Medalist'],
-    #                          show_hist=False, show_rug=False)
-    # fig.update_layout(autosize=False,width=1000,height=600)
-    # st.plotly_chart(fig)
-    #
+    fig = ff.create_distplot([x1, x2, x3, x4], ['Overall age', 'Gold Medalist', 'Silver Medalist', 'Bronze Medalist'],
+                             show_hist=False, show_rug=False)
+    fig.update_layout(autosize=False,width=1000,height=600)
+    st.plotly_chart(fig)
+
 
     st.title("Men vs Women participation over the years")
     final=helper.men_vs_women(df)
